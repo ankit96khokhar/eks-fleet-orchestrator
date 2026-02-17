@@ -1,0 +1,50 @@
+tenant: tenant-a
+env: dev
+region: ap-south-1
+account_id: "907793002691"
+
+admin_principal_arn: "arn:aws:iam::907793002691:user/admin"
+account_id: "907793002691"
+
+jenkins:
+  url: "http://jenkins.example.com:8080"
+  user: "admin"
+  token: "115e66b5ce422f3c24f5b6ce220456e52a"
+  job_name: "terraform-cicd-final"
+
+services:
+  eks:
+    enabled: true
+    config:
+      dev-cpu-1:
+        fleet: cpu
+        version: "1.29"
+        is_canary: true
+
+      dev-cpu-2:
+        fleet: cpu
+        version: "1.29"
+
+      dev-cpu-3:
+        fleet: cpu
+        version: "1.29"
+
+      dev-cpu-4:
+        fleet: cpu
+        version: "1.29"
+
+      dev-cpu-5:
+        fleet: cpu
+        version: "1.29"
+
+      dev-cpu-6:
+        fleet: cpu
+        version: "1.29"
+        vpc_name: "shared"
+        node_groups:
+          default:
+            instance_types:
+              - c7i-flex.large
+            min: 1
+            max: 2
+            desired: 1        

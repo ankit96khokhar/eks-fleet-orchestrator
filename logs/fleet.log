@@ -1,0 +1,1166 @@
+2026-02-14 16:37:50 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 16:37:50 | INFO | config-loader | Configuration validation passed
+2026-02-14 16:37:50 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 16:37:50 | INFO | main | Starting fleet upgrade for tenant=tenant-a env=dev
+2026-02-14 16:37:50 | INFO | main | Initialization successful. Next step: Orchestrator integration.
+2026-02-14 16:39:09 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 16:39:09 | INFO | config-loader | Configuration validation passed
+2026-02-14 16:39:09 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 16:39:09 | INFO | main | Starting fleet upgrade for tenant=tenant-a env=dev
+2026-02-14 16:39:09 | INFO | main | Initialization successful. Next step: Orchestrator integration.
+2026-02-14 16:39:25 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 16:39:25 | INFO | config-loader | Configuration validation passed
+2026-02-14 16:39:25 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 16:39:25 | INFO | main | Starting fleet upgrade for tenant=tenant-a env=dev
+2026-02-14 16:39:25 | INFO | main | Initialization successful. Next step: Orchestrator integration.
+2026-02-14 16:43:13 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 16:43:13 | INFO | config-loader | Configuration validation passed
+2026-02-14 16:43:13 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 16:43:13 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-14 16:43:13 | INFO | orchestrator | Building cluster objects from config
+2026-02-14 16:43:13 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-14 16:43:13 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-14 16:43:13 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-14 16:43:13 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-14 16:43:13 | INFO | orchestrator | Processing fleet: cpu
+2026-02-14 16:43:13 | INFO | orchestrator | Canary cluster for fleet 'cpu': dev-cpu-1
+2026-02-14 16:43:13 | INFO | orchestrator | Regular clusters count: 1
+2026-02-14 16:43:13 | INFO | orchestrator | Canary upgrade step would execute here
+2026-02-14 16:43:13 | INFO | orchestrator | Validation step would execute here
+2026-02-14 16:43:13 | INFO | orchestrator | Wave rollout would execute here
+2026-02-14 16:43:13 | INFO | orchestrator | Fleet 'cpu' completed (skeleton)
+2026-02-14 16:43:13 | INFO | main | Fleet orchestration completed successfully
+2026-02-14 17:25:44 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 17:25:44 | INFO | config-loader | Configuration validation passed
+2026-02-14 17:25:44 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 17:25:44 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-14 17:25:44 | INFO | orchestrator | Building cluster objects from config
+2026-02-14 17:25:44 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-14 17:25:44 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-14 17:25:44 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-14 17:25:44 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-14 17:25:44 | INFO | orchestrator | Processing fleet: cpu
+2026-02-14 17:25:44 | INFO | orchestrator | Canary cluster for fleet 'cpu': dev-cpu-1
+2026-02-14 17:25:44 | INFO | orchestrator | Regular clusters count: 1
+2026-02-14 17:25:44 | INFO | orchestrator | Canary upgrade step would execute here
+2026-02-14 17:25:44 | INFO | orchestrator | Validation step would execute here
+2026-02-14 17:25:44 | INFO | orchestrator | Wave rollout would execute here
+2026-02-14 17:25:44 | INFO | orchestrator | Fleet 'cpu' completed (skeleton)
+2026-02-14 17:25:44 | INFO | main | Fleet orchestration completed successfully
+2026-02-14 17:28:24 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 17:28:24 | INFO | config-loader | Configuration validation passed
+2026-02-14 17:28:24 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 17:28:24 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-14 17:28:24 | INFO | orchestrator | Building cluster objects from config
+2026-02-14 17:28:24 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-14 17:28:24 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-14 17:28:24 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-14 17:28:24 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-14 17:28:24 | INFO | orchestrator | Processing fleet: cpu
+2026-02-14 17:28:24 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-14 17:28:24 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 79, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 94, in _run_fleet
+    self._upgrade_cluster(canary)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 110, in _upgrade_cluster
+    if self.state.already_upgraded(cluster):
+AttributeError: 'FleetOrchestrator' object has no attribute 'state'
+2026-02-14 17:32:13 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 17:32:13 | INFO | config-loader | Configuration validation passed
+2026-02-14 17:32:13 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 17:32:13 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-14 17:32:13 | INFO | orchestrator | Building cluster objects from config
+2026-02-14 17:32:13 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-14 17:32:13 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-14 17:32:13 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-14 17:32:13 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-14 17:32:13 | INFO | orchestrator | Processing fleet: cpu
+2026-02-14 17:32:13 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-14 17:32:13 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 85, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 100, in _run_fleet
+    self._upgrade_cluster(canary)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 116, in _upgrade_cluster
+    if self.state.already_upgraded(cluster):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 24, in already_upgraded
+    response = self.table.get_item(Key=self._key(cluster))
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/factory.py", line 581, in do_action
+    response = action(self, *args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.ResourceNotFoundException: An error occurred (ResourceNotFoundException) when calling the GetItem operation: Requested resource not found
+2026-02-14 17:38:28 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 17:38:28 | INFO | config-loader | Configuration validation passed
+2026-02-14 17:38:28 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 17:38:28 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-14 17:38:28 | INFO | orchestrator | Building cluster objects from config
+2026-02-14 17:38:28 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-14 17:38:28 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-14 17:38:28 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-14 17:38:28 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-14 17:38:28 | INFO | orchestrator | Processing fleet: cpu
+2026-02-14 17:38:28 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-14 17:38:28 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-1
+2026-02-14 17:38:28 | INFO | state-manager | Lock acquired
+2026-02-14 17:38:28 | INFO | orchestrator | Upgrading cluster dev-cpu-1
+2026-02-14 17:38:28 | INFO | orchestrator | >>> Upgrade logic would run here <<<
+2026-02-14 17:38:28 | INFO | state-manager | Marking tenant-a-dev-dev-cpu-1 as SUCCESS
+2026-02-14 17:38:29 | INFO | orchestrator | Canary validation step (placeholder)
+2026-02-14 17:38:29 | INFO | orchestrator | Starting Wave Rollout
+2026-02-14 17:38:29 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-2
+2026-02-14 17:38:29 | INFO | state-manager | Lock acquired
+2026-02-14 17:38:29 | INFO | orchestrator | Upgrading cluster dev-cpu-2
+2026-02-14 17:38:29 | INFO | orchestrator | >>> Upgrade logic would run here <<<
+2026-02-14 17:38:29 | INFO | state-manager | Marking tenant-a-dev-dev-cpu-2 as SUCCESS
+2026-02-14 17:38:29 | INFO | orchestrator | Fleet 'cpu' completed
+2026-02-14 17:38:29 | INFO | main | Fleet orchestration completed successfully
+2026-02-14 17:44:45 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-14 17:44:45 | INFO | config-loader | Configuration validation passed
+2026-02-14 17:44:45 | INFO | config-loader | Configuration loaded successfully
+2026-02-14 17:44:45 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-14 17:44:45 | INFO | orchestrator | Building cluster objects from config
+2026-02-14 17:44:45 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-14 17:44:45 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-14 17:44:45 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-14 17:44:45 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-14 17:44:45 | INFO | orchestrator | Processing fleet: cpu
+2026-02-14 17:44:45 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-14 17:44:46 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-14 17:44:46 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-14 17:44:51 | INFO | orchestrator | Bake complete
+2026-02-14 17:44:51 | INFO | orchestrator | Total clusters: 1
+2026-02-14 17:44:51 | INFO | orchestrator | Wave size: 1
+2026-02-14 17:44:51 | INFO | orchestrator | Total waves: 1
+2026-02-14 17:44:51 | INFO | orchestrator | Starting Wave 1
+2026-02-14 17:44:51 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-14 17:44:51 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-14 17:44:56 | INFO | orchestrator | Bake complete
+2026-02-14 17:44:56 | INFO | orchestrator | Fleet 'cpu' completed successfully
+2026-02-14 17:44:56 | INFO | main | Fleet orchestration completed successfully
+2026-02-16 12:51:45 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 12:51:45 | INFO | config-loader | Configuration validation passed
+2026-02-16 12:51:45 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 12:51:45 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 12:51:46 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 12:51:46 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-16 12:51:46 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 12:51:46 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 12:51:46 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-16 12:51:46 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 12:51:46 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 12:51:46 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 12:51:46 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 12:51:51 | INFO | orchestrator | Bake complete
+2026-02-16 12:51:51 | INFO | orchestrator | Total clusters: 1
+2026-02-16 12:51:51 | INFO | orchestrator | Wave size: 1
+2026-02-16 12:51:51 | INFO | orchestrator | Total waves: 1
+2026-02-16 12:51:51 | INFO | orchestrator | Starting Wave 1
+2026-02-16 12:51:51 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 12:51:51 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 12:51:56 | INFO | orchestrator | Bake complete
+2026-02-16 12:51:56 | INFO | orchestrator | Fleet 'cpu' completed successfully
+2026-02-16 12:51:56 | INFO | main | Fleet orchestration completed successfully
+2026-02-16 12:54:10 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 12:54:10 | INFO | config-loader | Configuration validation passed
+2026-02-16 12:54:10 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 12:54:10 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 12:54:10 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 12:54:10 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-16 12:54:10 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 12:54:10 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 12:54:10 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-16 12:54:10 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 12:54:10 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 12:54:10 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-1
+2026-02-16 12:54:10 | WARNING | state-manager | Cluster locked and not expired (age=28s)
+2026-02-16 12:54:10 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-1 as FAILED
+2026-02-16 12:54:10 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 155, in _upgrade_cluster
+    self.state.lock(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 59, in lock
+    raise StateLockError("Cluster already locked")
+app.exceptions.StateLockError: Cluster already locked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 105, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 122, in _run_fleet
+    self._upgrade_cluster(canary)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 163, in _upgrade_cluster
+    self.state.mark_failure(cluster, str(e))
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 98, in mark_failure
+    self.table.update_item(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/factory.py", line 581, in do_action
+    response = action(self, *args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the UpdateItem operation: Invalid UpdateExpression: Attribute name is a reserved keyword; reserved keyword: error
+2026-02-16 12:56:35 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 12:56:35 | INFO | config-loader | Configuration validation passed
+2026-02-16 12:56:35 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 12:56:35 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 12:56:35 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 12:56:35 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-16 12:56:35 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 12:56:35 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 12:56:35 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-16 12:56:35 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 12:56:35 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 12:56:36 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-1
+2026-02-16 12:56:36 | WARNING | state-manager | Stale lock detected (age=3774s). Overriding lock.
+2026-02-16 12:56:36 | INFO | state-manager | Lock acquired
+2026-02-16 12:56:36 | INFO | orchestrator | Upgrading cluster dev-cpu-1
+2026-02-16 12:56:36 | INFO | orchestrator | >>> Upgrade logic would run here <<<
+2026-02-16 12:56:36 | INFO | state-manager | Marking tenant-a-dev-dev-cpu-1 as SUCCESS
+2026-02-16 12:56:36 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 12:56:41 | INFO | orchestrator | Bake complete
+2026-02-16 12:56:41 | INFO | orchestrator | Total clusters: 1
+2026-02-16 12:56:41 | INFO | orchestrator | Wave size: 1
+2026-02-16 12:56:41 | INFO | orchestrator | Total waves: 1
+2026-02-16 12:56:41 | INFO | orchestrator | Starting Wave 1
+2026-02-16 12:56:41 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 12:56:41 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 12:56:46 | INFO | orchestrator | Bake complete
+2026-02-16 12:56:46 | INFO | orchestrator | Fleet 'cpu' completed successfully
+2026-02-16 12:56:46 | INFO | main | Fleet orchestration completed successfully
+2026-02-16 13:02:56 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 13:02:56 | INFO | config-loader | Configuration validation passed
+2026-02-16 13:02:56 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 13:02:56 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 13:02:56 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 13:02:56 | INFO | orchestrator | Total clusters loaded: 2
+2026-02-16 13:02:56 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 13:02:56 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 13:02:56 | INFO | orchestrator | Fleet 'cpu' has 2 clusters
+2026-02-16 13:02:56 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 13:02:56 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 13:02:59 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 13:02:59 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 13:03:04 | INFO | orchestrator | Bake complete
+2026-02-16 13:03:04 | INFO | orchestrator | Total clusters: 1
+2026-02-16 13:03:04 | INFO | orchestrator | Wave size: 1
+2026-02-16 13:03:04 | INFO | orchestrator | Total waves: 1
+2026-02-16 13:03:04 | INFO | orchestrator | Starting Wave 1
+2026-02-16 13:03:04 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 13:03:07 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 13:03:07 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 13:03:12 | INFO | orchestrator | Bake complete
+2026-02-16 13:03:12 | INFO | orchestrator | Fleet 'cpu' completed successfully
+2026-02-16 13:03:12 | INFO | main | Fleet orchestration completed successfully
+2026-02-16 13:04:01 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 13:04:01 | INFO | config-loader | Configuration validation passed
+2026-02-16 13:04:01 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 13:04:01 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 13:04:01 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 13:04:01 | INFO | orchestrator | Total clusters loaded: 5
+2026-02-16 13:04:01 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 13:04:01 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 13:04:01 | INFO | orchestrator | Fleet 'cpu' has 5 clusters
+2026-02-16 13:04:01 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 13:04:01 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 13:04:04 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 13:04:04 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 13:04:09 | INFO | orchestrator | Bake complete
+2026-02-16 13:04:09 | INFO | orchestrator | Total clusters: 4
+2026-02-16 13:04:09 | INFO | orchestrator | Wave size: 2
+2026-02-16 13:04:09 | INFO | orchestrator | Total waves: 2
+2026-02-16 13:04:09 | INFO | orchestrator | Starting Wave 1
+2026-02-16 13:04:09 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 13:04:12 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 13:04:12 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-3
+2026-02-16 13:04:12 | INFO | state-manager | Lock acquired
+2026-02-16 13:04:12 | INFO | orchestrator | Upgrading cluster dev-cpu-3
+2026-02-16 13:04:12 | INFO | orchestrator | >>> Upgrade logic would run here <<<
+2026-02-16 13:04:12 | INFO | state-manager | Marking tenant-a-dev-dev-cpu-3 as SUCCESS
+2026-02-16 13:04:12 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 13:04:17 | INFO | orchestrator | Bake complete
+2026-02-16 13:04:17 | INFO | orchestrator | Starting Wave 2
+2026-02-16 13:04:17 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 13:04:20 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-4
+2026-02-16 13:04:20 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-5
+2026-02-16 13:04:20 | INFO | state-manager | Lock acquired
+2026-02-16 13:04:20 | INFO | orchestrator | Upgrading cluster dev-cpu-4
+2026-02-16 13:04:20 | INFO | orchestrator | >>> Upgrade logic would run here <<<
+2026-02-16 13:04:20 | INFO | state-manager | Marking tenant-a-dev-dev-cpu-4 as SUCCESS
+2026-02-16 13:04:20 | INFO | state-manager | Lock acquired
+2026-02-16 13:04:20 | INFO | orchestrator | Upgrading cluster dev-cpu-5
+2026-02-16 13:04:20 | INFO | orchestrator | >>> Upgrade logic would run here <<<
+2026-02-16 13:04:20 | INFO | state-manager | Marking tenant-a-dev-dev-cpu-5 as SUCCESS
+2026-02-16 13:04:20 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 13:04:25 | INFO | orchestrator | Bake complete
+2026-02-16 13:04:25 | INFO | orchestrator | Fleet 'cpu' completed successfully
+2026-02-16 13:04:25 | INFO | main | Fleet orchestration completed successfully
+2026-02-16 14:33:49 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 14:33:49 | INFO | config-loader | Configuration validation passed
+2026-02-16 14:33:49 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 14:33:49 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 14:33:49 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 14:33:49 | INFO | orchestrator | Total clusters loaded: 5
+2026-02-16 14:33:49 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 14:33:49 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 14:33:49 | INFO | orchestrator | Fleet 'cpu' has 5 clusters
+2026-02-16 14:33:49 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 14:33:49 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 14:33:52 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 14:33:52 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 14:33:57 | INFO | orchestrator | Bake complete
+2026-02-16 14:33:57 | INFO | orchestrator | Total clusters: 4
+2026-02-16 14:33:57 | INFO | orchestrator | Wave size: 2
+2026-02-16 14:33:57 | INFO | orchestrator | Total waves: 2
+2026-02-16 14:33:57 | INFO | orchestrator | Starting Wave 1
+2026-02-16 14:33:57 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 14:34:00 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 14:34:01 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 14:34:01 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 14:34:06 | INFO | orchestrator | Bake complete
+2026-02-16 14:34:06 | INFO | orchestrator | Starting Wave 2
+2026-02-16 14:34:06 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 14:34:09 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 14:34:09 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 14:34:09 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 14:34:14 | INFO | orchestrator | Bake complete
+2026-02-16 14:34:14 | INFO | orchestrator | Fleet 'cpu' completed successfully
+2026-02-16 14:34:14 | INFO | main | Fleet orchestration completed successfully
+2026-02-16 14:34:35 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 14:34:35 | INFO | config-loader | Configuration validation passed
+2026-02-16 14:34:35 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 14:34:35 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 14:34:35 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 14:34:35 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-16 14:34:35 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 14:34:35 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 14:34:35 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-16 14:34:35 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 14:34:35 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 14:34:39 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 14:34:39 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 14:34:44 | INFO | orchestrator | Bake complete
+2026-02-16 14:34:44 | INFO | orchestrator | Total clusters: 5
+2026-02-16 14:34:44 | INFO | orchestrator | Wave size: 2
+2026-02-16 14:34:44 | INFO | orchestrator | Total waves: 3
+2026-02-16 14:34:44 | INFO | orchestrator | Starting Wave 1
+2026-02-16 14:34:44 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 14:34:47 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 14:34:47 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 14:34:47 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 14:34:52 | INFO | orchestrator | Bake complete
+2026-02-16 14:34:52 | INFO | orchestrator | Starting Wave 2
+2026-02-16 14:34:52 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 14:34:55 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 14:34:55 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 14:34:55 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 14:35:00 | INFO | orchestrator | Bake complete
+2026-02-16 14:35:00 | INFO | orchestrator | Starting Wave 3
+2026-02-16 14:35:00 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 14:35:03 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-16 14:35:03 | INFO | state-manager | Lock acquired
+2026-02-16 14:35:03 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-16 14:35:03 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-16 14:35:03 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-16 14:35:03 | ERROR | orchestrator | Stopping further rollout
+2026-02-16 14:35:03 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 178, in _upgrade_cluster
+    strategy = BlueGreenUpgradeStrategy(
+TypeError: __init__() got an unexpected keyword argument 'region'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 112, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 153, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 187, in _upgrade_cluster
+    self.state.mark_failure(cluster, str(e))
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 98, in mark_failure
+    self.table.update_item(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/factory.py", line 581, in do_action
+    response = action(self, *args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the UpdateItem operation: Invalid UpdateExpression: Attribute name is a reserved keyword; reserved keyword: error
+2026-02-16 15:14:54 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 15:14:54 | INFO | config-loader | Configuration validation passed
+2026-02-16 15:14:54 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 15:14:54 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 15:14:54 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 15:14:54 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-16 15:14:54 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 15:14:54 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 15:14:54 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-16 15:14:54 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 15:14:54 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 15:14:57 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 15:14:57 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 15:15:02 | INFO | orchestrator | Bake complete
+2026-02-16 15:15:02 | INFO | orchestrator | Total clusters: 5
+2026-02-16 15:15:02 | INFO | orchestrator | Wave size: 2
+2026-02-16 15:15:02 | INFO | orchestrator | Total waves: 3
+2026-02-16 15:15:02 | INFO | orchestrator | Starting Wave 1
+2026-02-16 15:15:02 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:15:05 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 15:15:05 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 15:15:05 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 15:15:10 | INFO | orchestrator | Bake complete
+2026-02-16 15:15:10 | INFO | orchestrator | Starting Wave 2
+2026-02-16 15:15:10 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:15:13 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 15:15:13 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 15:15:13 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 15:15:18 | INFO | orchestrator | Bake complete
+2026-02-16 15:15:18 | INFO | orchestrator | Starting Wave 3
+2026-02-16 15:15:18 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:15:21 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-16 15:15:21 | WARNING | state-manager | Stale lock detected (age=2418s). Overriding lock.
+2026-02-16 15:15:21 | INFO | state-manager | Lock acquired
+2026-02-16 15:15:21 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-16 15:15:21 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-16 15:15:21 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-16 15:15:21 | ERROR | orchestrator | Stopping further rollout
+2026-02-16 15:15:21 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 183, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 19, in upgrade
+    green_name = cluster.green_name()
+AttributeError: 'Cluster' object has no attribute 'green_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 112, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 153, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 188, in _upgrade_cluster
+    self.state.mark_failure(cluster, str(e))
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 98, in mark_failure
+    self.table.update_item(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/factory.py", line 581, in do_action
+    response = action(self, *args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the UpdateItem operation: Invalid UpdateExpression: Attribute name is a reserved keyword; reserved keyword: error
+2026-02-16 15:17:06 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 15:17:06 | INFO | config-loader | Configuration validation passed
+2026-02-16 15:17:06 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 15:17:06 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 15:17:06 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 15:17:06 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-16 15:17:06 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 15:17:06 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 15:17:06 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-16 15:17:06 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 15:17:06 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 15:17:09 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 15:17:09 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 15:17:14 | INFO | orchestrator | Bake complete
+2026-02-16 15:17:14 | INFO | orchestrator | Total clusters: 5
+2026-02-16 15:17:14 | INFO | orchestrator | Wave size: 2
+2026-02-16 15:17:14 | INFO | orchestrator | Total waves: 3
+2026-02-16 15:17:14 | INFO | orchestrator | Starting Wave 1
+2026-02-16 15:17:14 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:17:17 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 15:17:17 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 15:17:17 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 15:17:22 | INFO | orchestrator | Bake complete
+2026-02-16 15:17:22 | INFO | orchestrator | Starting Wave 2
+2026-02-16 15:17:22 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:17:25 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 15:17:25 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 15:17:25 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 15:17:30 | INFO | orchestrator | Bake complete
+2026-02-16 15:17:30 | INFO | orchestrator | Starting Wave 3
+2026-02-16 15:17:30 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:17:33 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-16 15:17:33 | WARNING | state-manager | Cluster locked and not expired (age=132s)
+2026-02-16 15:17:33 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-16 15:17:34 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-16 15:17:34 | ERROR | orchestrator | Stopping further rollout
+2026-02-16 15:17:34 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 175, in _upgrade_cluster
+    self.state.lock(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 59, in lock
+    raise StateLockError("Cluster already locked")
+app.exceptions.StateLockError: Cluster already locked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 112, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 153, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 188, in _upgrade_cluster
+    self.state.mark_failure(cluster, str(e))
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/state_manager.py", line 98, in mark_failure
+    self.table.update_item(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/factory.py", line 581, in do_action
+    response = action(self, *args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/boto3/resources/action.py", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/botocore/client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the UpdateItem operation: Invalid UpdateExpression: Attribute name is a reserved keyword; reserved keyword: error
+2026-02-16 15:19:07 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 15:19:07 | INFO | config-loader | Configuration validation passed
+2026-02-16 15:19:07 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 15:19:07 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 15:19:07 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 15:19:07 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-16 15:19:07 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 15:19:07 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 15:19:07 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-16 15:19:07 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 15:19:07 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 15:19:11 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 15:19:11 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 15:19:16 | INFO | orchestrator | Bake complete
+2026-02-16 15:19:16 | INFO | orchestrator | Total clusters: 5
+2026-02-16 15:19:16 | INFO | orchestrator | Wave size: 2
+2026-02-16 15:19:16 | INFO | orchestrator | Total waves: 3
+2026-02-16 15:19:16 | INFO | orchestrator | Starting Wave 1
+2026-02-16 15:19:16 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:19:19 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 15:19:19 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 15:19:19 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 15:19:24 | INFO | orchestrator | Bake complete
+2026-02-16 15:19:24 | INFO | orchestrator | Starting Wave 2
+2026-02-16 15:19:24 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:19:27 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 15:19:27 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 15:19:27 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 15:19:32 | INFO | orchestrator | Bake complete
+2026-02-16 15:19:32 | INFO | orchestrator | Starting Wave 3
+2026-02-16 15:19:32 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:19:35 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-16 15:19:35 | WARNING | state-manager | Cluster locked and not expired (age=254s)
+2026-02-16 15:19:35 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-16 15:19:35 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-16 15:19:35 | ERROR | orchestrator | Stopping further rollout
+2026-02-16 15:19:35 | ERROR | main | Fleet upgrade failed: Cluster already locked
+2026-02-16 15:22:29 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 15:22:29 | INFO | config-loader | Configuration validation passed
+2026-02-16 15:22:29 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 15:22:29 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 15:22:29 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 15:22:29 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-16 15:22:29 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 15:22:29 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 15:22:29 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-16 15:22:29 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 15:22:29 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 15:22:32 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 15:22:32 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 15:22:37 | INFO | orchestrator | Bake complete
+2026-02-16 15:22:37 | INFO | orchestrator | Total clusters: 5
+2026-02-16 15:22:37 | INFO | orchestrator | Wave size: 2
+2026-02-16 15:22:37 | INFO | orchestrator | Total waves: 3
+2026-02-16 15:22:37 | INFO | orchestrator | Starting Wave 1
+2026-02-16 15:22:37 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:22:40 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 15:22:40 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 15:22:40 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 15:22:45 | INFO | orchestrator | Bake complete
+2026-02-16 15:22:45 | INFO | orchestrator | Starting Wave 2
+2026-02-16 15:22:45 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:22:48 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 15:22:48 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 15:22:48 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 15:22:53 | INFO | orchestrator | Bake complete
+2026-02-16 15:22:53 | INFO | orchestrator | Starting Wave 3
+2026-02-16 15:22:53 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:22:56 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-16 15:22:56 | INFO | state-manager | Lock acquired
+2026-02-16 15:22:56 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-16 15:22:56 | INFO | blue-green-strategy | Starting BLUE-GREEN upgrade for dev-cpu-6
+2026-02-16 15:22:56 | INFO | blue-green-strategy | Creating GREEN cluster dev-cpu-6-green-v1-29
+2026-02-16 15:22:56 | INFO | blue-green-strategy | Running terraform to create GREEN cluster
+2026-02-16 15:22:56 | INFO | terraform-service | Running: terraform init -input=false
+2026-02-16 15:22:56 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-16 15:22:56 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-16 15:22:56 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-16 15:22:56 | ERROR | orchestrator | Stopping further rollout
+2026-02-16 15:22:56 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 113, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 154, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 184, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 27, in upgrade
+    self._create_green_cluster(cluster, green_name)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 51, in _create_green_cluster
+    self.terraform.init()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/services/terraform_service.py", line 29, in init
+    self._run(["terraform", "init", "-input=false"])
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/services/terraform_service.py", line 15, in _run
+    result = subprocess.run(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '../infra'
+2026-02-16 15:41:25 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-16 15:41:25 | INFO | config-loader | Configuration validation passed
+2026-02-16 15:41:25 | INFO | config-loader | Configuration loaded successfully
+2026-02-16 15:41:25 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-16 15:41:25 | INFO | orchestrator | Building cluster objects from config
+2026-02-16 15:41:25 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-16 15:41:25 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-16 15:41:25 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-16 15:41:25 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-16 15:41:25 | INFO | orchestrator | Processing fleet: cpu
+2026-02-16 15:41:25 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-16 15:41:28 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-16 15:41:28 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-16 15:41:33 | INFO | orchestrator | Bake complete
+2026-02-16 15:41:33 | INFO | orchestrator | Total clusters: 5
+2026-02-16 15:41:33 | INFO | orchestrator | Wave size: 2
+2026-02-16 15:41:33 | INFO | orchestrator | Total waves: 3
+2026-02-16 15:41:33 | INFO | orchestrator | Starting Wave 1
+2026-02-16 15:41:33 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:41:37 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-16 15:41:37 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-16 15:41:37 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-16 15:41:42 | INFO | orchestrator | Bake complete
+2026-02-16 15:41:42 | INFO | orchestrator | Starting Wave 2
+2026-02-16 15:41:42 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:41:45 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-16 15:41:45 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-16 15:41:45 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-16 15:41:50 | INFO | orchestrator | Bake complete
+2026-02-16 15:41:50 | INFO | orchestrator | Starting Wave 3
+2026-02-16 15:41:50 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-16 15:41:53 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-16 15:41:53 | INFO | state-manager | Lock acquired
+2026-02-16 15:41:53 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-16 15:41:53 | INFO | blue-green-strategy | Starting BLUE-GREEN upgrade for dev-cpu-6
+2026-02-16 15:41:53 | INFO | blue-green-strategy | Creating GREEN cluster dev-cpu-6-green-v1-29
+2026-02-16 15:41:53 | INFO | blue-green-strategy | Running terraform to create GREEN cluster
+2026-02-16 15:41:53 | INFO | terraform-service | Running: terraform init -input=false
+2026-02-16 15:41:53 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-16 15:41:53 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-16 15:41:53 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-16 15:41:53 | ERROR | orchestrator | Stopping further rollout
+2026-02-16 15:41:53 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 113, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 154, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 184, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 27, in upgrade
+    self._create_green_cluster(cluster, green_name)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 51, in _create_green_cluster
+    self.terraform.init()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/services/terraform_service.py", line 29, in init
+    self._run(["terraform", "init", "-input=false"])
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/services/terraform_service.py", line 15, in _run
+    result = subprocess.run(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '../infra'
+2026-02-17 11:27:51 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-17 11:27:51 | INFO | config-loader | Configuration validation passed
+2026-02-17 11:27:51 | INFO | config-loader | Configuration loaded successfully
+2026-02-17 11:27:51 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-17 11:27:51 | INFO | orchestrator | Building cluster objects from config
+2026-02-17 11:27:51 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-17 11:27:51 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-17 11:27:51 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-17 11:27:51 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-17 11:27:51 | INFO | orchestrator | Processing fleet: cpu
+2026-02-17 11:27:51 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-17 11:27:54 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-17 11:27:54 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-17 11:27:59 | INFO | orchestrator | Bake complete
+2026-02-17 11:27:59 | INFO | orchestrator | Total clusters: 5
+2026-02-17 11:27:59 | INFO | orchestrator | Wave size: 2
+2026-02-17 11:27:59 | INFO | orchestrator | Total waves: 3
+2026-02-17 11:27:59 | INFO | orchestrator | Starting Wave 1
+2026-02-17 11:27:59 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 11:28:02 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-17 11:28:03 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-17 11:28:03 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-17 11:28:08 | INFO | orchestrator | Bake complete
+2026-02-17 11:28:08 | INFO | orchestrator | Starting Wave 2
+2026-02-17 11:28:08 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 11:28:11 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-17 11:28:11 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-17 11:28:11 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-17 11:28:16 | INFO | orchestrator | Bake complete
+2026-02-17 11:28:16 | INFO | orchestrator | Starting Wave 3
+2026-02-17 11:28:16 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 11:28:19 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-17 11:28:19 | INFO | state-manager | Lock acquired
+2026-02-17 11:28:19 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-17 11:28:19 | INFO | blue-green-strategy | Starting BLUE-GREEN upgrade for dev-cpu-6
+2026-02-17 11:28:19 | INFO | blue-green-strategy | Creating GREEN cluster dev-cpu-6-green-v1-29
+2026-02-17 11:28:19 | INFO | blue-green-strategy | Running terraform to create GREEN cluster
+2026-02-17 11:28:19 | INFO | terraform-service | Running: terraform init -input=false
+2026-02-17 11:28:19 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-17 11:28:19 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-17 11:28:19 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-17 11:28:19 | ERROR | orchestrator | Stopping further rollout
+2026-02-17 11:28:19 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 113, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 154, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 184, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 27, in upgrade
+    self._create_green_cluster(cluster, green_name)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/blue_green_strategy.py", line 51, in _create_green_cluster
+    self.terraform.init()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/services/terraform_service.py", line 29, in init
+    self._run(["terraform", "init", "-input=false"])
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/services/terraform_service.py", line 15, in _run
+    result = subprocess.run(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '../infra'
+2026-02-17 16:26:02 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-17 16:26:02 | INFO | config-loader | Configuration validation passed
+2026-02-17 16:26:02 | INFO | config-loader | Configuration loaded successfully
+2026-02-17 16:26:02 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-17 16:26:02 | INFO | orchestrator | Building cluster objects from config
+2026-02-17 16:26:02 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-17 16:26:02 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-17 16:26:02 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-17 16:26:02 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-17 16:26:02 | INFO | orchestrator | Processing fleet: cpu
+2026-02-17 16:26:02 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-17 16:26:05 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-17 16:26:05 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-17 16:26:10 | INFO | orchestrator | Bake complete
+2026-02-17 16:26:10 | INFO | orchestrator | Total clusters: 5
+2026-02-17 16:26:10 | INFO | orchestrator | Wave size: 2
+2026-02-17 16:26:10 | INFO | orchestrator | Total waves: 3
+2026-02-17 16:26:10 | INFO | orchestrator | Starting Wave 1
+2026-02-17 16:26:10 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:26:13 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-17 16:26:13 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-17 16:26:13 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-17 16:26:18 | INFO | orchestrator | Bake complete
+2026-02-17 16:26:18 | INFO | orchestrator | Starting Wave 2
+2026-02-17 16:26:18 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:26:21 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-17 16:26:21 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-17 16:26:21 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-17 16:26:26 | INFO | orchestrator | Bake complete
+2026-02-17 16:26:26 | INFO | orchestrator | Starting Wave 3
+2026-02-17 16:26:26 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:26:29 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-17 16:26:29 | INFO | state-manager | Lock acquired
+2026-02-17 16:26:29 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-17 16:26:29 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-17 16:26:29 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-17 16:26:29 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-17 16:26:29 | ERROR | orchestrator | Stopping further rollout
+2026-02-17 16:26:29 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 114, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 155, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 181, in _upgrade_cluster
+    strategy = InPlaceStrategy(self.config)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/in_place_strategy.py", line 14, in __init__
+    base_url=config["jenkins"]["url"],
+KeyError: 'jenkins'
+2026-02-17 16:32:35 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-17 16:32:35 | INFO | config-loader | Configuration validation passed
+2026-02-17 16:32:35 | INFO | config-loader | Configuration loaded successfully
+2026-02-17 16:32:35 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-17 16:32:35 | INFO | orchestrator | Building cluster objects from config
+2026-02-17 16:32:35 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-17 16:32:35 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-17 16:32:35 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-17 16:32:35 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-17 16:32:35 | INFO | orchestrator | Processing fleet: cpu
+2026-02-17 16:32:35 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-17 16:32:35 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-17 16:32:35 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-17 16:32:40 | INFO | orchestrator | Bake complete
+2026-02-17 16:32:40 | INFO | orchestrator | Total clusters: 5
+2026-02-17 16:32:40 | INFO | orchestrator | Wave size: 2
+2026-02-17 16:32:40 | INFO | orchestrator | Total waves: 3
+2026-02-17 16:32:40 | INFO | orchestrator | Starting Wave 1
+2026-02-17 16:32:40 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:32:40 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-17 16:32:40 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-17 16:32:40 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-17 16:32:45 | INFO | orchestrator | Bake complete
+2026-02-17 16:32:45 | INFO | orchestrator | Starting Wave 2
+2026-02-17 16:32:45 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:32:45 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-17 16:32:45 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-17 16:32:45 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-17 16:32:50 | INFO | orchestrator | Bake complete
+2026-02-17 16:32:50 | INFO | orchestrator | Starting Wave 3
+2026-02-17 16:32:50 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:32:50 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-17 16:32:50 | INFO | state-manager | Lock acquired
+2026-02-17 16:32:50 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-17 16:32:50 | INFO | in-place | Starting In-place upgrade for dev-cpu-6
+2026-02-17 16:32:50 | INFO | jenkins | Triggering Jenkins job: terraform-cicd-final
+2026-02-17 16:32:50 | INFO | jenkins | Waiting for Jenkins build to start
+2026-02-17 16:33:05 | INFO | jenkins | Monitoring build
+2026-02-17 16:33:05 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-17 16:33:05 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-17 16:33:07 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-17 16:33:07 | INFO | config-loader | Configuration validation passed
+2026-02-17 16:33:07 | INFO | config-loader | Configuration loaded successfully
+2026-02-17 16:33:07 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-17 16:33:07 | INFO | orchestrator | Building cluster objects from config
+2026-02-17 16:33:07 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-17 16:33:07 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-17 16:33:07 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-17 16:33:07 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-17 16:33:07 | INFO | orchestrator | Processing fleet: cpu
+2026-02-17 16:33:07 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-17 16:33:07 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-17 16:33:07 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-17 16:33:07 | INFO | orchestrator | Bake complete
+2026-02-17 16:33:07 | INFO | orchestrator | Total clusters: 5
+2026-02-17 16:33:07 | INFO | orchestrator | Wave size: 2
+2026-02-17 16:33:07 | INFO | orchestrator | Total waves: 3
+2026-02-17 16:33:07 | INFO | orchestrator | Starting Wave 1
+2026-02-17 16:33:07 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:33:07 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-17 16:33:08 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-17 16:33:08 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-17 16:33:08 | INFO | orchestrator | Bake complete
+2026-02-17 16:33:08 | INFO | orchestrator | Starting Wave 2
+2026-02-17 16:33:08 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:33:08 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-17 16:33:08 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-17 16:33:08 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-17 16:33:08 | INFO | orchestrator | Bake complete
+2026-02-17 16:33:08 | INFO | orchestrator | Starting Wave 3
+2026-02-17 16:33:08 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:33:08 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-17 16:33:08 | INFO | state-manager | Lock acquired
+2026-02-17 16:33:08 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-17 16:33:08 | INFO | in-place | Starting In-place upgrade for dev-cpu-6
+2026-02-17 16:33:08 | INFO | jenkins | Triggering Jenkins job: terraform-cicd-final
+2026-02-17 16:33:08 | INFO | jenkins | Waiting for Jenkins build to start
+2026-02-17 16:33:23 | INFO | jenkins | Monitoring build
+2026-02-17 16:33:23 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-17 16:33:23 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-17 16:33:23 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-17 16:33:23 | ERROR | orchestrator | Stopping further rollout
+2026-02-17 16:33:23 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1012, in _send_output
+    self.send(msg)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 952, in send
+    self.connect()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1101fffa0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='jenkins', port=8080): Max retries exceeded with url: /job/terraform-cicd-final/113/api/json (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1101fffa0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 114, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 155, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 185, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/in_place_strategy.py", line 35, in upgrade
+    result = self.jenkins.wait_for_completion(queue)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/jenkins_client.py", line 37, in wait_for_completion
+    build_info = requests.get(f"{build_url}api/json", auth=self.auth).json()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/.venv/lib/python3.9/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='jenkins', port=8080): Max retries exceeded with url: /job/terraform-cicd-final/113/api/json (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1101fffa0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2026-02-17 16:40:21 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-17 16:40:21 | INFO | config-loader | Configuration validation passed
+2026-02-17 16:40:21 | INFO | config-loader | Configuration loaded successfully
+2026-02-17 16:40:21 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-17 16:40:21 | INFO | orchestrator | Building cluster objects from config
+2026-02-17 16:40:21 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-17 16:40:21 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-17 16:40:21 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-17 16:40:21 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-17 16:40:21 | INFO | orchestrator | Processing fleet: cpu
+2026-02-17 16:40:21 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-17 16:40:22 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-17 16:40:22 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-17 16:40:22 | INFO | orchestrator | Bake complete
+2026-02-17 16:40:22 | INFO | orchestrator | Total clusters: 5
+2026-02-17 16:40:22 | INFO | orchestrator | Wave size: 2
+2026-02-17 16:40:22 | INFO | orchestrator | Total waves: 3
+2026-02-17 16:40:22 | INFO | orchestrator | Starting Wave 1
+2026-02-17 16:40:22 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:40:22 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-17 16:40:22 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-17 16:40:22 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-17 16:40:22 | INFO | orchestrator | Bake complete
+2026-02-17 16:40:22 | INFO | orchestrator | Starting Wave 2
+2026-02-17 16:40:22 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:40:22 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-17 16:40:22 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-17 16:40:22 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-17 16:40:22 | INFO | orchestrator | Bake complete
+2026-02-17 16:40:22 | INFO | orchestrator | Starting Wave 3
+2026-02-17 16:40:22 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:40:22 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-17 16:40:22 | INFO | state-manager | Lock acquired
+2026-02-17 16:40:22 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-17 16:40:22 | INFO | in-place | Starting In-place upgrade for dev-cpu-6
+2026-02-17 16:40:22 | INFO | jenkins | Triggering Jenkins job: terraform-cicd-final
+2026-02-17 16:40:22 | INFO | jenkins | Waiting for Jenkins build to start
+2026-02-17 16:40:37 | INFO | jenkins | Monitoring build
+2026-02-17 16:41:17 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-17 16:41:17 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-17 16:41:17 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-17 16:41:17 | ERROR | orchestrator | Stopping further rollout
+2026-02-17 16:41:17 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 114, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 155, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 185, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/in_place_strategy.py", line 38, in upgrade
+    raise Exception("Control plane upgrade failed")
+Exception: Control plane upgrade failed
+2026-02-17 16:47:11 | INFO | config-loader | Loading configuration file: inventory/sample.yaml
+2026-02-17 16:47:11 | INFO | config-loader | Configuration validation passed
+2026-02-17 16:47:11 | INFO | config-loader | Configuration loaded successfully
+2026-02-17 16:47:11 | INFO | main | Initializing FleetOrchestrator for tenant=tenant-a env=dev
+2026-02-17 16:47:11 | INFO | orchestrator | Building cluster objects from config
+2026-02-17 16:47:11 | INFO | orchestrator | Total clusters loaded: 6
+2026-02-17 16:47:11 | INFO | orchestrator | Starting fleet upgrade orchestration for env=dev
+2026-02-17 16:47:11 | INFO | orchestrator | Grouping clusters by fleet
+2026-02-17 16:47:11 | INFO | orchestrator | Fleet 'cpu' has 6 clusters
+2026-02-17 16:47:11 | INFO | orchestrator | Processing fleet: cpu
+2026-02-17 16:47:11 | INFO | orchestrator | Starting Canary Upgrade: dev-cpu-1
+2026-02-17 16:47:11 | INFO | orchestrator | Skipping dev-cpu-1 (already upgraded)
+2026-02-17 16:47:11 | INFO | orchestrator | Baking after canary for 5 seconds...
+2026-02-17 16:47:11 | INFO | orchestrator | Bake complete
+2026-02-17 16:47:11 | INFO | orchestrator | Total clusters: 5
+2026-02-17 16:47:11 | INFO | orchestrator | Wave size: 2
+2026-02-17 16:47:11 | INFO | orchestrator | Total waves: 3
+2026-02-17 16:47:11 | INFO | orchestrator | Starting Wave 1
+2026-02-17 16:47:11 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:47:11 | INFO | orchestrator | Skipping dev-cpu-3 (already upgraded)
+2026-02-17 16:47:11 | INFO | orchestrator | Skipping dev-cpu-2 (already upgraded)
+2026-02-17 16:47:11 | INFO | orchestrator | Baking after wave 1 for 5 seconds...
+2026-02-17 16:47:11 | INFO | orchestrator | Bake complete
+2026-02-17 16:47:11 | INFO | orchestrator | Starting Wave 2
+2026-02-17 16:47:11 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:47:11 | INFO | orchestrator | Skipping dev-cpu-4 (already upgraded)
+2026-02-17 16:47:11 | INFO | orchestrator | Skipping dev-cpu-5 (already upgraded)
+2026-02-17 16:47:11 | INFO | orchestrator | Baking after wave 2 for 5 seconds...
+2026-02-17 16:47:11 | INFO | orchestrator | Bake complete
+2026-02-17 16:47:11 | INFO | orchestrator | Starting Wave 3
+2026-02-17 16:47:11 | INFO | orchestrator | Running up to 5 clusters in parallel
+2026-02-17 16:47:11 | INFO | state-manager | Attempting to lock cluster tenant-a-dev-dev-cpu-6
+2026-02-17 16:47:11 | INFO | state-manager | Lock acquired
+2026-02-17 16:47:11 | INFO | orchestrator | Upgrading cluster dev-cpu-6
+2026-02-17 16:47:11 | INFO | in-place | Starting In-place upgrade for dev-cpu-6
+2026-02-17 16:47:11 | INFO | jenkins | Triggering Jenkins job: terraform-cicd-final
+2026-02-17 16:47:11 | INFO | jenkins | Waiting for Jenkins build to start
+2026-02-17 16:47:26 | INFO | jenkins | Monitoring build
+2026-02-17 16:48:26 | ERROR | orchestrator | Upgrade failed for dev-cpu-6
+2026-02-17 16:48:26 | ERROR | state-manager | Marking tenant-a-dev-dev-cpu-6 as FAILED
+2026-02-17 16:48:26 | ERROR | orchestrator | Wave 3 failed on cluster dev-cpu-6
+2026-02-17 16:48:26 | ERROR | orchestrator | Stopping further rollout
+2026-02-17 16:48:26 | ERROR | main | Unexpected error occurred
+Traceback (most recent call last):
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/main.py", line 27, in main
+    orchestrator.run()
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 114, in run
+    self._run_fleet(fleet_name, fleet_clusters)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 155, in _run_fleet
+    future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/orchestrator.py", line 185, in _upgrade_cluster
+    strategy.upgrade(cluster)
+  File "/Users/ankitkhokhar/Documents/projects/eks-fleet-orchestrator/app/strategies/in_place_strategy.py", line 38, in upgrade
+    raise Exception("Control plane upgrade failed")
+Exception: Control plane upgrade failed
