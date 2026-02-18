@@ -1,19 +1,19 @@
 pipeline {
   agent {
     kubernetes {
-      defaultContainer 'terraform'
+      defaultContainer 'python'
       idleMinutes 1
       yaml """
-apiVersion: v1
-kind: Pod
-spec:
-  containers:
-  - name: terraform
-    image: terraform-python-venv:local
-    imagePullPolicy: IfNotPresent
-    command: ["cat"]
-    tty: true
-"""
+  apiVersion: v1
+  kind: Pod
+  spec:
+    containers:
+    - name: python
+      image: python:3.11-slim
+      command:
+      - cat
+      tty: true
+  """
     }
   }
 
@@ -72,6 +72,15 @@ spec:
             credentialsId: 'github-ssh'            
           )
         }
+      }
+    }
+
+    stage('Install Dependencies') {
+      steps {
+        sh """
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        """
       }
     }
 
