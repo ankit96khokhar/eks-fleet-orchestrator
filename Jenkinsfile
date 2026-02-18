@@ -95,10 +95,16 @@ pipeline {
 
     stage('Run Fleet Orchestrator') {
       steps {
-        sh """
-          python3 -m app.main \
-          blueprints/tenants/${params.TENANT}/${params.ENV}/${params.REGION}.yaml
-        """
+        withAWS(
+          credentials: 'aws-bootstrap',
+          role: 'arn:aws:iam::907793002691:role/terraform-ci-role',
+          roleSessionName: 'jenkins-fleet-upgrade'
+        ) {
+          sh """
+            python -m app.main \
+            blueprints/tenants/${params.TENANT}/${params.ENV}/${params.REGION}.yaml
+          """
+        }
       }
     }
   }
