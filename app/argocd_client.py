@@ -40,3 +40,4 @@ class ArgoCDCLient:
         # Placeholder
         # In production use argocd API to check health
         time.sleep(30)
+        return True
